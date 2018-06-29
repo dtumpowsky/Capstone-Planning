@@ -31,9 +31,8 @@ var masterKegList = [
 function KegList(){
   return (
     <div>
-      <hr/>
-      {masterTicketList.map((Keg, index) =>
-        <Ticket name={keg.name}
+      {masterKegList.map((keg, index) =>
+        <Keg name={keg.name}
           brewery={keg.brewery}
           type={keg.type}
           price={keg.price}

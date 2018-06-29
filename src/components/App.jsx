@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './Header';
 import TableHeader from './TableHeader';
-import TicketList from './KegList';
-import NewTicketForm from './NewKegForm';
+import KegList from './KegList';
+import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 

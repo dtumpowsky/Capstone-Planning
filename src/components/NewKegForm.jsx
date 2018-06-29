@@ -21,4 +21,4 @@ function NewKegForm(){
   );
 }
 
-export default NewTicketForm;
+export default NewKegForm;

@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 function Keg(props){
   return (
     <div>
-        <style jsx>{`
+      <table>
+        <tbody>
+          <style jsx>{`
           div {
             background-color: #A0FEFF;
           }
@@ -13,11 +15,11 @@ function Keg(props){
           }
         `}</style>
           <th>{props.name}</th>
-            <td>{props.brewery}</td>
-            <td>{props.type}</td>
-            <td>${props.price}</td>
-            <td>{props.alcContent}</td>
-            <td>{props.pintsLeft}%</td>
+          <td>{props.brewery}</td>
+          <td>{props.type}</td>
+          <td>${props.price}</td>
+          <td>{props.alcContent}</td>
+          <td>{props.pintsLeft}%</td>
         </tbody>
       </table>
     </div>
