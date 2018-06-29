@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NewTicketForm(){
+function NewKegForm(){
   return (
     <div>
       <form>

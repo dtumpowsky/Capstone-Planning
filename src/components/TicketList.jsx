@@ -1,36 +1,48 @@
 import React from 'react';
 import Ticket from './Ticket';
 
-var masterTicketList = [
+var masterKegList = [
   {
-    names: 'Thato and Haley',
-    location: '3A',
-    issue: 'Firebase won\'t save record. Halp.'
+    name: 'Wonderland Trail',
+    brewery: 'Two Beers',
+    type: 'IPA',
+    price: '$7.00',
+    alcContent: '8.0%',
+    pintsLeft: 124
   },
   {
-    names: 'Sleater and Kinney',
-    location: '4B',
-    issue: 'Fox image not displaying on page, can only see duck?'
+    name: 'Tipsy Toboggan',
+    brewery: 'Two Beers',
+    type: 'Winter Ale',
+    price: '$9.00',
+    alcContent: '6.50%',
+    pintsLeft: 124
   },
   {
-    names: 'Imani & Jacob',
-    location: '9F',
-    issue: 'Donkey picture not displaying on hover in Zoology app. :('
+    name: 'Wonderland Trail',
+    brewery: 'Two Beers',
+    type: 'IPA',
+    price: '$7.00',
+    alcContent: '8.0%',
+    pintsLeft: 124
   }
 ];
 
-function TicketList(){
+function KegList(){
   return (
     <div>
       <hr/>
-      {masterTicketList.map((ticket, index) =>
-        <Ticket names={ticket.names}
-          location={ticket.location}
-          issue={ticket.issue}
+      {masterTicketList.map((Keg, index) =>
+        <Ticket name={keg.name}
+          brewery={keg.brewery}
+          type={keg.type}
+          price={keg.price}
+          alcContent={keg.alcContent}
+          pintsLeft={keg.pintsLeft}
           key={index}/>
       )}
     </div>
   );
 }
 
-export default TicketList;
+export default KegList;
