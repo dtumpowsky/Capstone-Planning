@@ -21,7 +21,7 @@ function TableHeader(){
             </th>
           </tr>
         </thead>
-      </table>
+      </table>  
     </div>
   );
 }

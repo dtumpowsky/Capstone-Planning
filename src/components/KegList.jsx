@@ -31,15 +31,19 @@ var masterKegList = [
 function KegList(){
   return (
     <div>
-      {masterKegList.map((keg, index) =>
-        <Keg name={keg.name}
-          brewery={keg.brewery}
-          type={keg.type}
-          price={keg.price}
-          alcContent={keg.alcContent}
-          pintsLeft={keg.pintsLeft}
-          key={index}/>
-      )}
+      <table>
+        <tbody>
+          {masterKegList.map((keg, index) =>
+            <Keg name={keg.name}
+              brewery={keg.brewery}
+              type={keg.type}
+              price={keg.price}
+              alcContent={keg.alcContent}
+              pintsLeft={keg.pintsLeft}
+              key={index}/>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 }
