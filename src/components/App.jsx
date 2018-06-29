@@ -19,8 +19,8 @@ function App() {
       `}</style>
       <Header/>
       <Switch>
-        <Route exact path='/' component={TicketList} />
-        <Route path='/newticket' component={NewTicketForm} />
+        <Route exact path='/' component={KegList} />
+        <Route path='/newticket' component={NewKegForm} />
         <Route component={Error404} />
       </Switch>
       <div style={{margin: '19px auto 0', width: 142}}>

@@ -6,8 +6,7 @@ function Header(){
   return (
     <div>
       <h1>Tap Room</h1>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
-      <img src={helpIcon}/>
+      <Link to="/">Home</Link> | <Link to="/newkeg">Add New Keg</Link>
     </div>
   );
 }

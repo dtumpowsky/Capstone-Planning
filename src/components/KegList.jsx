@@ -1,29 +1,29 @@
 import React from 'react';
-import Ticket from './Ticket';
+import Keg from './Keg';
 
 var masterKegList = [
   {
     name: 'Wonderland Trail',
     brewery: 'Two Beers',
     type: 'IPA',
-    price: '$7.00',
-    alcContent: '8.0%',
+    price: 7.00,
+    alcContent: 8.0,
     pintsLeft: 124
   },
   {
     name: 'Tipsy Toboggan',
     brewery: 'Two Beers',
     type: 'Winter Ale',
-    price: '$9.00',
-    alcContent: '6.50%',
+    price: 9.00,
+    alcContent: 6.50,
     pintsLeft: 124
   },
   {
     name: 'Wonderland Trail',
     brewery: 'Two Beers',
     type: 'IPA',
-    price: '$7.00',
-    alcContent: '8.0%',
+    price: 7.00,
+    alcContent: 8.0,
     pintsLeft: 124
   }
 ];
