@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import TableHeader from './TableHeader';
 import KegList from './KegList';
 import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
@@ -19,7 +18,6 @@ function App() {
         }
       `}</style>
       <Header/>
-      <TableHeader/>
       <Switch>
         <Route exact path='/' component={KegList} />
         <Route path='/newkeg' component={NewKegForm} />

@@ -6,15 +6,24 @@ function NewKegForm(){
       <form>
         <input
           type='text'
-          id='names'
-          placeholder='Pair Names'/>
+          id='name'
+          placeholder='Beer name'/>
         <input
           type='text'
-          id='location'
-          placeholder='Location'/>
-        <textarea
-          id='issue'
-          placeholder='Describe your issue.'/>
+          id='brewery'
+          placeholder='Brewery'/>
+        <input
+          type='text'
+          id='type'
+          placeholder='Type'/>
+        <input
+          type='text'
+          id='price'
+          placeholder='Price'/>
+        <input
+          type='text'
+          id='alcContent'
+          placeholder='Alcohot %'/>
         <button type='submit'>Help!</button>
       </form>
     </div>
