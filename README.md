@@ -1,30 +1,32 @@
-### _Web-Scraper#_
+### _React-Tap-Room_
 ### Version 1.0
 #### By:
-#### Date: Mon Jun 18 15:45:03 PDT 2018
+#### Date: July 5, 2018
 
 ##### Description
-_This web applications allows users to create a todo lists_
+_This web application allows users to create a running log of kegs on tap_
 
 ##### Setup/Installation Requirements
-* .NET
-* C#
+* React.js
+* JavaScript
+* JSX
+* Bootstrap
+* CSS
+* HTML
 ##### Known Bugs
 _So far there are no bugs_
 
 #### Support and contact details
-_If you run into a problem, contact us at abc@epicodus.com_
+_If you run into a problem, contact us at tumpowskydavid@gmail.com_
 
 ![picture alt](component-diagram.png "Component Diagram")
 
 #### Specs
 - This web application has the following functionalities:
-  * Get All items
-  * Append to the Database
-  * Delete Database
-  * Search for items
-  * Sort
-  * Edit
+  * Get All Kegs
+  * Each keg displays its Name, Type, Brewery, Price, Alcohol %, and Pints Left
+  * Add new keg
+
 ### License
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -38,5 +40,5 @@ _If you run into a problem, contact us at abc@epicodus.com_
 *
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-* Copyright (c) 2018 _rio atmadja@epicodus_
+* Copyright (c) 2018 _tumpowskydavid@gmail.com_
 ####
