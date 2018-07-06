@@ -17,7 +17,7 @@ function KegList(props){
             <th>Pints Left</th>
             <th>
               <Link to="/admin">
-                <button type='submit'>Admin</button>
+                <button>Admin</button>
               </Link>
             </th>
           </tr>

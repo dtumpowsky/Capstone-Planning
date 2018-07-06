@@ -29,7 +29,7 @@ function Keg(props){
   } else {
     return (
       <div>
-        {PintsLeft}
+        {kegInformation}
       </div>
     );
   }
