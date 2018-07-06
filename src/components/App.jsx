@@ -12,39 +12,60 @@ import { v4 } from 'uuid';
 
 class App() extends React.Component {
 
-  constructor
   constructor(props) {
     super(props);
     this.state = {
-      masterTicketList: {},
-      selectedTicket: null
+      masterKegList: {},
+      selectedKeg: null
     };
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
+  }
 
-  return (
-    <div className="container">
-      <style global jsx >{`
-        body {
-          font-family: Helvetica;
-        }
-        a {
-          color: #888;
-          text-decoration: none;
-        }
-      `}</style>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={KegList} />
-        <Route path='/newkeg' component={NewKegForm} />
-        <Route component={Error404} />
-      </Switch>
-      <div style={{margin: '19px auto 0', width: 142}}>
-        <a href="https://medium.com/" target="_blank">
-          <div className="box">
-          </div>
-        </a>
+  handleAddingNewTicketToList(newTicket){
+    var newTicketId = v4();
+    var newMasterTicketList = Object.assign({}, this.state.masterTicketList, {
+      [newTicketId]: newTicket
+    });
+    newMasterTicketList[newTicketId].formattedWaitTime = newMasterTicketList[newTicketId].timeOpen.fromNow(true);
+    this.setState({masterTicketList: newMasterTicketList});
+  }
+
+  handleChangingSelectedTicket(ticketId){
+    this.setState({selectedTicket: ticketId});
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <style global jsx >{`
+          body {
+            font-family: Helvetica;
+          }
+          a {
+            color: #888;
+            text-decoration: none;
+          }
+        `}</style>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={KegList} />
+          <Route path='/newkeg'render={()=><NewTicketControl onNewKegCreation={this.handleAddingNewTicketToList} />} />
+          <Route component={Error404} />
+        </Switch>
+        <div style={{margin: '19px auto 0', width: 142}}>
+          <a href="https://medium.com/" target="_blank">
+            <div className="box">
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+}
+
+NewKegControl.propTypes = {
+  onNewKegCreation: PropTypes.func;
 }
 
 export default App;
