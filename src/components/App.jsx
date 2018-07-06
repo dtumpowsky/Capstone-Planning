@@ -26,7 +26,6 @@ class App extends React.Component {
     var newMasterKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
     });
-    newMasterKegList[newKegId].formattedWaitTime = newMasterKegList[newKegId].timeOpen.fromNow(true);
     this.setState({masterKegList: newMasterKegList});
   }
 
@@ -49,7 +48,10 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' component={KegList} />
-          <Route path='/newkeg'render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
+          <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList}     currentRouterPath={props.location.pathname}
+            onKegSelection={this.handleChangingSelectedKeg}
+            selectedKeg={this.state.selectedKeg}/>} />
+          <Route path='/newkeg'render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404} />
         </Switch>
         <div style={{margin: '19px auto 0', width: 142}}>
@@ -63,8 +65,8 @@ class App extends React.Component {
   }
 }
 
-NewKegControl.propTypes = {
+NewKegForm.propTypes = {
   onNewKegCreation: PropTypes.func
-}
+};
 
 export default App;
