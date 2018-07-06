@@ -16,9 +16,9 @@ function NewKegForm(props){
       name: _name.value,
       brewery: _brewery.value,
       type: _type.value,
-      price: _price.value,
-      alcContent: _alcContent.value,
-      pintsleft: _pintsLeft.value
+      price: '$' + _price.value,
+      alcContent: _alcContent.value + '%',
+      pintsLeft: _pintsLeft.value
     });
     _name.value = '';
     _brewery.value = '';
@@ -31,37 +31,51 @@ function NewKegForm(props){
   return (
     <div>
       <form onSubmit={handleNewKegFormSubmission}>
-        <input
-          type='text'
-          id='name'
-          placeholder='Beer name'
-          ref={(input) => {_name = input;}}/>
-        <input
-          type='text'
-          id='brewery'
-          placeholder='Brewery'
-          ref={(input) => {_brewery = input;}}/>
-        <input
-          type='text'
-          id='type'
-          placeholder='Type'
-          ref={(input) => {_type = input;}}/>
-        <input
-          type='text'
-          id='price'
-          placeholder='Price'
-          ref={(input) => {_price = input;}}/>
-        <input
-          type='text'
-          id='alcContent'
-          placeholder='Alcohol %'
-          ref={(input) => {_alcContent = input;}}/>
-        <input
-          type='text'
-          id='pintsLeft'
-          placeholder='Pints'
-          ref={(input) => {_pintsLeft = input;}}/>
-        <button className="btn btn-info"type='submit'>Add Keg</button>
+        <div>
+          <input
+            type='text'
+            id='name'
+            placeholder='Beer name'
+            ref={(input) => {_name = input;}}/>
+        </div>
+        <div>
+          <input
+            type='text'
+            id='brewery'
+            placeholder='Brewery'
+            ref={(input) => {_brewery = input;}}/>
+        </div>
+        <div>
+          <input
+            type='text'
+            id='type'
+            placeholder='Type'
+            ref={(input) => {_type = input;}}/>
+        </div>
+        <div>
+          <input
+            type='text'
+            id='price'
+            placeholder='Price'
+            ref={(input) => {_price = input;}}/>
+        </div>
+        <div>
+          <input
+            type='text'
+            id='alcContent'
+            placeholder='Alcohol %'
+            ref={(input) => {_alcContent = input;}}/>
+        </div>
+        <div>
+          <input
+            type='text'
+            id='pintsLeft'
+            placeholder='Pints'
+            ref={(input) => {_pintsLeft = input;}}/>
+          <div>
+            <button className="btn btn-success"type='submit'>Add Keg</button>
+          </div>
+        </div>
       </form>
     </div>
   );
