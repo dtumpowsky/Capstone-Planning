@@ -21,7 +21,24 @@ var masterKegList = [
   },
 ];
 
-function KegList(){
+function KegList(props){
+  return (
+    <div>
+      <hr/>
+      {Object.keys(props.kegList).map(function(kegId) {
+        var keg = props.kegList[kegId];
+        return <Keg names={keg.names}
+          location={keg.location}
+          issue={keg.issue}
+          formattedWaitTime={keg.formattedWaitTime}
+          currentRouterPath={props.currentRouterPath}
+          key={kegId}
+          onKegSelection={props.onKegSelection}
+          kegId={kegId}/>;
+      })}
+    </div>
+  );
+}
   return (
     <div>
       <table className="table">
@@ -34,53 +51,39 @@ function KegList(){
             <th>Alc %</th>
             <th>Pints Left</th>
             <th>
-              <Link to="/newkeg">
-                <button type='submit'>Add New Keg</button>
+              <Link to="/admin">
+                <button type='submit'>Admin</button>
               </Link>
             </th>
           </tr>
         </thead>
         <tbody>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                name={keg.name}/>
-            )}
-          </td>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                brewery={keg.brewery}/>
-            )}
-          </td>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                type={keg.type}/>
-            )}
-          </td>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                price={keg.price}/>
-            )}
-          </td>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                price={keg.alcContent}/>
-            )}
-          </td>
-          <td>
-            {masterKegList.map((keg, index) =>
-              <Keg
-                price={keg.pintsLeft}/>
-            )}
-          </td>
+        <td>
+        {Object.keys(props.kegList).map(function(kegId) {
+          var keg = props.kegList[kegId];
+          return <Keg names={keg.name}
+            location={keg.brewery}
+            issue={keg.type}
+            price={keg.price}
+            price={keg.alcContent}
+            price={keg.price}
+            currentRouterPath={props.currentRouterPath}
+            key={kegId}
+            onKegSelection={props.onKegSelection}
+            kegId={kegId}/>;
+        })}
+        </td>
         </tbody>
       </table>
     </div>
   );
 }
+
+KegList.propTypes = {
+  kegList: PropTypes.object,
+  currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func,
+  kegId: PropTypes.string.isRequireds
+};
 
 export default KegList;

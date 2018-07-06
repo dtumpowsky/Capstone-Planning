@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import KegList from './KegList';
-import KegDetail from './PintsLeft';
+import PintsLeft from './PintsLeft';
+import { Link } from 'react-router-dom';
 
 
 function Admin(props){
@@ -12,6 +13,9 @@ function Admin(props){
   return (
     <div>
       <h2>Admin</h2>
+      <Link to="/newkeg">
+        <button type='submit'>Add Keg</button>
+      </Link>
       {optionalSelectedKegContent}
       <KegList kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}

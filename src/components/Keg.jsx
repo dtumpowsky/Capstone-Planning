@@ -20,11 +20,11 @@ function Keg(props){
       <td>{props.pintsLeft}</td>
     </div>;
   if (props.currentRouterPath === '/admin'){
-      return (
-        <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
-          {kegInformation}
-        </div>
-      );
+    return (
+      <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
+        {kegInformation}
+      </div>
+    );
   } else {
     return (
       <div>

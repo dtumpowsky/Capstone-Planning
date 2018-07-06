@@ -4,13 +4,12 @@ import KegList from './KegList';
 import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
-import NewKegControl from './NewKegControl';
 import PropTypes from 'prop-types';
 import Moment from 'moment';
 import Admin from './Admin';
 import { v4 } from 'uuid';
 
-class App() extends React.Component {
+class App extends React.Component {
 
   constructor(props) {
     super(props);
@@ -22,17 +21,17 @@ class App() extends React.Component {
     this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
   }
 
-  handleAddingNewTicketToList(newTicket){
-    var newTicketId = v4();
-    var newMasterTicketList = Object.assign({}, this.state.masterTicketList, {
-      [newTicketId]: newTicket
+  handleAddingNewKegToList(newKeg){
+    var newKegId = v4();
+    var newMasterKegList = Object.assign({}, this.state.masterKegList, {
+      [newKegId]: newKeg
     });
-    newMasterTicketList[newTicketId].formattedWaitTime = newMasterTicketList[newTicketId].timeOpen.fromNow(true);
-    this.setState({masterTicketList: newMasterTicketList});
+    newMasterKegList[newKegId].formattedWaitTime = newMasterKegList[newKegId].timeOpen.fromNow(true);
+    this.setState({masterKegList: newMasterKegList});
   }
 
-  handleChangingSelectedTicket(ticketId){
-    this.setState({selectedTicket: ticketId});
+  handleChangingSelectedKeg(kegId){
+    this.setState({selectedKeg: kegId});
   }
 
   render() {
@@ -50,7 +49,7 @@ class App() extends React.Component {
         <Header/>
         <Switch>
           <Route exact path='/' component={KegList} />
-          <Route path='/newkeg'render={()=><NewTicketControl onNewKegCreation={this.handleAddingNewTicketToList} />} />
+          <Route path='/newkeg'render={()=><NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404} />
         </Switch>
         <div style={{margin: '19px auto 0', width: 142}}>
@@ -65,7 +64,7 @@ class App() extends React.Component {
 }
 
 NewKegControl.propTypes = {
-  onNewKegCreation: PropTypes.func;
+  onNewKegCreation: PropTypes.func
 }
 
 export default App;
