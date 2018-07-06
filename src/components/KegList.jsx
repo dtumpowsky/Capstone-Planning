@@ -27,11 +27,56 @@ function KegList(props){
             {Object.keys(props.kegList).map(function(kegId) {
               var keg = props.kegList[kegId];
               return <Keg name={keg.name}
-                brewery={keg.brewery}
-                type={keg.type}
-                price={keg.price}
-                alcContent={keg.alcContent}
-                pintsLeft={keg.pintsLeft}
+                currentRouterPath={props.currentRouterPath}
+                onKegSelection={props.onKegSelection}
+                key={kegId}
+                kegId={kegId}/>;
+            })}
+          </td>
+          <td>
+            {Object.keys(props.kegList).map(function(kegId) {
+              var keg = props.kegList[kegId];
+              return <Keg brewery={keg.brewery}
+                currentRouterPath={props.currentRouterPath}
+                onKegSelection={props.onKegSelection}
+                key={kegId}
+                kegId={kegId}/>;
+            })}
+          </td>
+          <td>
+            {Object.keys(props.kegList).map(function(kegId) {
+              var keg = props.kegList[kegId];
+              return <Keg type={keg.type}
+                currentRouterPath={props.currentRouterPath}
+                onKegSelection={props.onKegSelection}
+                key={kegId}
+                kegId={kegId}/>;
+            })}
+          </td>
+          <td>
+            {Object.keys(props.kegList).map(function(kegId) {
+              var keg = props.kegList[kegId];
+              return <Keg price={keg.price}
+                currentRouterPath={props.currentRouterPath}
+                onKegSelection={props.onKegSelection}
+                key={kegId}
+                kegId={kegId}/>;
+            })}
+          </td>
+          <td>
+            {Object.keys(props.kegList).map(function(kegId) {
+              var keg = props.kegList[kegId];
+              return <Keg alcContent={keg.alcContent}
+                currentRouterPath={props.currentRouterPath}
+                onKegSelection={props.onKegSelection}
+                key={kegId}
+                kegId={kegId}/>;
+            })}
+          </td>
+          <td>
+            {Object.keys(props.kegList).map(function(kegId) {
+              var keg = props.kegList[kegId];
+              return <Keg pintsLeft={keg.pintsLeft}
                 currentRouterPath={props.currentRouterPath}
                 onKegSelection={props.onKegSelection}
                 key={kegId}
@@ -48,7 +93,8 @@ KegList.propTypes = {
   kegList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func,
-  kegId: PropTypes.string.isRequired
+  kegId: PropTypes.string,
+  onNewKegCreation: PropTypes.func
 };
 
 export default KegList;

@@ -19,7 +19,7 @@ function Admin(props){
       {optionalSelectedKegContent}
       <KegList kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}
-        onKegSelection={props.onKegSelection}/>;/>
+        onKegSelection={props.onKegSelection}/>
     </div>
   );
 }

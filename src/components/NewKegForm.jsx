@@ -20,12 +20,12 @@ function NewKegForm(props){
       alcContent: _alcContent.value,
       pintsleft: _pintsLeft.value
     });
-    _name.value;
-    _brewery.value;
-    _type.value;
-    _price.value;
-    _alcContent.value;
-    _pintsLeft.value;
+    _name.value = '';
+    _brewery.value = '';
+    _type.value = '';
+    _price.value = '';
+    _alcContent.value = '';
+    _pintsLeft.value = '';
   }
 
   return (
@@ -34,28 +34,34 @@ function NewKegForm(props){
         <input
           type='text'
           id='name'
-          placeholder='Beer name'/>
+          placeholder='Beer name'
+          ref={(input) => {_name = input;}}/>
         <input
           type='text'
           id='brewery'
-          placeholder='Brewery'/>
+          placeholder='Brewery'
+          ref={(input) => {_brewery = input;}}/>
         <input
           type='text'
           id='type'
-          placeholder='Type'/>
+          placeholder='Type'
+          ref={(input) => {_type = input;}}/>
         <input
           type='text'
           id='price'
-          placeholder='Price'/>
+          placeholder='Price'
+          ref={(input) => {_price = input;}}/>
         <input
           type='text'
           id='alcContent'
-          placeholder='Alcohot %'/>
+          placeholder='Alcohol %'
+          ref={(input) => {_alcContent = input;}}/>
         <input
           type='text'
           id='pintsLeft'
-          placeholder='Pints in Keg'/>
-        <button type='submit'>Help!</button>
+          placeholder='Pints'
+          ref={(input) => {_pintsLeft = input;}}/>
+        <button className="btn btn-info"type='submit'>Add Keg</button>
       </form>
     </div>
   );

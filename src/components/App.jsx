@@ -47,8 +47,8 @@ class App extends React.Component {
         `}</style>
         <Header/>
         <Switch>
-          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList}     currentRouterPath={props.location.pathname}
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}/>} />
+          <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList}         currentRouterPath={props.location.pathname}
             onKegSelection={this.handleChangingSelectedKeg}
             selectedKeg={this.state.selectedKeg}/>} />
           <Route path='/newkeg'render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
@@ -64,6 +64,10 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
 
 NewKegForm.propTypes = {
   onNewKegCreation: PropTypes.func
