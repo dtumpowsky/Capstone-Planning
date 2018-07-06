@@ -9,6 +9,7 @@ import Moment from 'moment';
 import Admin from './Admin';
 import { v4 } from 'uuid';
 
+
 class App extends React.Component {
 
   constructor(props) {
@@ -36,16 +37,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <style global jsx >{`
-          body {
-            font-family: Helvetica;
-          }
-          a {
-            color: #888;
-            text-decoration: none;
-          }
-        `}</style>
-        <Header/>
+      <style global jsx >{`
+        body {
+          font-family: Helvetica;
+        }
+        a {
+          color: #888;
+          text-decoration: none;
+        }
+      `}</style>
+        <div className='jumbotron'>
+          <Header/>
+        </div>
         <Switch>
           <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
           <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList}         currentRouterPath={props.location.pathname}
@@ -60,6 +63,7 @@ class App extends React.Component {
             </div>
           </a>
         </div>
+
       </div>
     );
   }
