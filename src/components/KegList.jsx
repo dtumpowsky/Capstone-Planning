@@ -26,9 +26,9 @@ function KegList(props){
           <td>
             {Object.keys(props.kegList).map(function(kegId) {
               var keg = props.kegList[kegId];
-              return <Keg names={keg.name}
-                location={keg.brewery}
-                issue={keg.type}
+              return <Keg name={keg.name}
+                brewery={keg.brewery}
+                type={keg.type}
                 price={keg.price}
                 alcContent={keg.alcContent}
                 currentRouterPath={props.currentRouterPath}

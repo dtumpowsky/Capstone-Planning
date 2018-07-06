@@ -26,6 +26,7 @@ class App extends React.Component {
     var newMasterKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
     });
+    newMasterKegList[newKegId].formattedWaitTime = newMasterKegList[newKegId].timeOpen.fromNow(true);
     this.setState({masterKegList: newMasterKegList});
   }
 

@@ -19,7 +19,7 @@ function Admin(props){
       {optionalSelectedKegContent}
       <KegList kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}
-        onKegSelection={props.onKegSelection} />
+        onKegSelection={props.onKegSelection}/>;/>
     </div>
   );
 }
@@ -28,7 +28,8 @@ Admin.propTypes = {
   kegList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
-  selectedKeg: PropTypes.string
+  selectedKeg: PropTypes.string,
+  onNewKegCreation: PropTypes.func
 };
 
 export default Admin;
