@@ -1,30 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import KegList from './KegList';
-import KegDetail from './Pints';
+import KegDetail from './PintsLeft';
 
 
 function Admin(props){
-  let optionalSelectedTicketContent = null;
-  if (props.selectedTicket != null){
-    optionalSelectedTicketContent =  <TicketDetail selectedTicket={props.ticketList[props.selectedTicket]}/>;
+  let optionalSelectedKegContent = null;
+  if (props.selectedKeg != null){
+    optionalSelectedKegContent =  <PintsLeft selectedKeg={props.kegList[props.selectedKeg]}/>;
   }
   return (
     <div>
       <h2>Admin</h2>
-      {optionalSelectedTicketContent}
-      <TicketList ticketList={props.ticketList}
+      {optionalSelectedKegContent}
+      <KegList kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}
-        onTicketSelection={props.onTicketSelection} />
+        onKegSelection={props.onKegSelection} />
     </div>
   );
 }
 
 Admin.propTypes = {
-  ticketList: PropTypes.object,
+  kegList: PropTypes.object,
   currentRouterPath: PropTypes.string.isRequired,
-  onTicketSelection: PropTypes.func.isRequired,
-  selectedTicket: PropTypes.string
+  onKegSelection: PropTypes.func.isRequired,
+  selectedKeg: PropTypes.string
 };
 
 export default Admin;
