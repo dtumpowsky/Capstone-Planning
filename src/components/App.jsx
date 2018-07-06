@@ -4,8 +4,22 @@ import KegList from './KegList';
 import NewKegForm from './NewKegForm';
 import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
+import NewKegControl from './NewKegControl';
+import PropTypes from 'prop-types';
+import Moment from 'moment';
+import Admin from './Admin';
+import { v4 } from 'uuid';
 
-function App() {
+class App() extends React.Component {
+
+  constructor
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterTicketList: {},
+      selectedTicket: null
+    };
+
   return (
     <div className="container">
       <style global jsx >{`

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props){
-  return (
+  const kegInformation =
     <div>
       <style jsx>{`
       div {
@@ -18,8 +18,20 @@ function Keg(props){
       <td>{props.price}</td>
       <td>{props.alcContent}</td>
       <td>{props.pintsLeft}</td>
-    </div>
-  );
+    </div>;
+  if (props.currentRouterPath === '/admin'){
+      return (
+        <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
+          {kegInformation}
+        </div>
+      );
+  } else {
+    return (
+      <div>
+        {kegInformation}
+      </div>
+    );
+  }
 }
 
 Keg.propTypes = {

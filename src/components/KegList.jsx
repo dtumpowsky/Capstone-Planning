@@ -33,7 +33,6 @@ function KegList(){
             <th>Price</th>
             <th>Alc %</th>
             <th>Pints Left</th>
-            <th>Admin</th>
             <th>
               <Link to="/newkeg">
                 <button type='submit'>Add New Keg</button>
@@ -43,33 +42,39 @@ function KegList(){
         </thead>
         <tbody>
           <td>
-          {masterKegList.map((keg, index) =>
-            <Keg
-              name={keg.name}/>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                name={keg.name}/>
             )}
           </td>
           <td>
-          {masterKegList.map((keg, index) =>
-            <Keg
-              brewery={keg.brewery}/>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                brewery={keg.brewery}/>
             )}
           </td>
           <td>
-          {masterKegList.map((keg, index) =>
-            <Keg
-              type={keg.type}/>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                type={keg.type}/>
             )}
           </td>
           <td>
-          {masterKegList.map((keg, index) =>
-            <Keg
-              price={keg.price}/>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                price={keg.price}/>
             )}
           </td>
           <td>
-          {masterKegList.map((keg, index) =>
-            <Keg
-              price={keg.price}/>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                price={keg.alcContent}/>
+            )}
+          </td>
+          <td>
+            {masterKegList.map((keg, index) =>
+              <Keg
+                price={keg.pintsLeft}/>
             )}
           </td>
         </tbody>
