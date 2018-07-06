@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const { resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -31,6 +32,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
+      },
+      {
         test: /\.jsx?$/,
         enforce: "pre",
         loader: "eslint-loader",
@@ -38,9 +49,9 @@ module.exports = {
         options: {
           emitWarning: true,
           configFile: "./.eslintrc.json"
-        }
-      },
-      {
+          }
+        },
+        {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
@@ -54,16 +65,6 @@ module.exports = {
             "styled-jsx/babel"
           ]
         }
-      },
-      {
-        test: /\.(png|gif|jp(e*)g|svg)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 8000,
-            name: 'images/[hash]-[name].[ext]'
-          }
-        }
       }
     ]
   },
@@ -71,5 +72,11 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      template:'template.ejs',
+      appMountId: 'react-app-root',
+      title: 'React Help Queue',
+      filename: resolve(__dirname, "build", "index.html"),
+    }),
   ]
 };

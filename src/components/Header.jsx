@@ -6,6 +6,7 @@ function Header(){
     <div>
       <h1>Tap Room</h1>
       <Link to="/">Home</Link>
+      <button className='btn btn-success' type='submit'>jfdk</button>
     </div>
   );
 }
