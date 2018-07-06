@@ -5,7 +5,7 @@ function PintsLeft(props){
   return (
     <div>
       <hr/>
-      <h1>{props.selectedKeg.names}</h1>
+      <h1>{props.selectedKeg.name}</h1>
       <h4><em>{props.selectedKeg.pintsLeft}</em></h4>
       <hr/>
     </div>

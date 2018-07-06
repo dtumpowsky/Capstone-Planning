@@ -31,9 +31,10 @@ function KegList(props){
                 type={keg.type}
                 price={keg.price}
                 alcContent={keg.alcContent}
+                pintsLeft={keg.pintsLeft}
                 currentRouterPath={props.currentRouterPath}
-                key={kegId}
                 onKegSelection={props.onKegSelection}
+                key={kegId}
                 kegId={kegId}/>;
             })}
           </td>
@@ -47,7 +48,7 @@ KegList.propTypes = {
   kegList: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func,
-  kegId: PropTypes.string.isRequireds
+  kegId: PropTypes.string.isRequired
 };
 
 export default KegList;

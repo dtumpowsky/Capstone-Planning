@@ -18,7 +18,7 @@ function NewKegForm(props){
       type: _type.value,
       price: _price.value,
       alcContent: _alcContent.value,
-      pintsleft: _pintsLeft.value,
+      pintsleft: _pintsLeft.value
     });
     _name.value;
     _brewery.value;

@@ -25,7 +25,7 @@ class App extends React.Component {
     var newKegId = v4();
     var newMasterKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
-    })
+    });
     this.setState({masterKegList: newMasterKegList});
   }
 
@@ -47,7 +47,7 @@ class App extends React.Component {
         `}</style>
         <Header/>
         <Switch>
-          <Route exact path='/' component={KegList} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
           <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList}     currentRouterPath={props.location.pathname}
             onKegSelection={this.handleChangingSelectedKeg}
             selectedKeg={this.state.selectedKeg}/>} />

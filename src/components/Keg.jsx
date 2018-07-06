@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PintsLeft from './PintsLeft';
 
 function Keg(props){
   const kegInformation =
@@ -28,7 +29,7 @@ function Keg(props){
   } else {
     return (
       <div>
-        {kegInformation}
+        {PintsLeft}
       </div>
     );
   }
@@ -42,7 +43,7 @@ Keg.propTypes = {
   alcContent: PropTypes.number.isRequired,
   pintsLeft: PropTypes.number.isRequired,
   currentRouterPath: PropTypes.string,
-  onKegtSelection: PropTypes.func
+  onKegSelection: PropTypes.func
 };
 
 export default Keg;
