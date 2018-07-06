@@ -15,8 +15,8 @@ function Keg(props){
       <th>{props.name}</th>
       <td>{props.brewery}</td>
       <td>{props.type}</td>
-      <td>${props.price}.00</td>
-      <td>{props.alcContent}%</td>
+      <td>{props.price}</td>
+      <td>{props.alcContent}</td>
       <td>{props.pintsLeft}</td>
     </div>
   );

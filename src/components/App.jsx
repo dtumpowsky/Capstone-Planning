@@ -7,7 +7,7 @@ import Error404 from './Error404';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <style global jsx >{`
         body {
           font-family: Helvetica;

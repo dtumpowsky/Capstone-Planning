@@ -19,20 +19,12 @@ var masterKegList = [
     alcContent: 6.50,
     pintsLeft: 124
   },
-  {
-    name: 'Wonderland Trail',
-    brewery: 'Two Beers',
-    type: 'IPA',
-    price: 7.00,
-    alcContent: 8.0,
-    pintsLeft: 124
-  }
 ];
 
 function KegList(){
   return (
     <div>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Name</th>
@@ -50,15 +42,36 @@ function KegList(){
           </tr>
         </thead>
         <tbody>
+          <td>
           {masterKegList.map((keg, index) =>
-            <Keg name={keg.name}
-              brewery={keg.brewery}
-              type={keg.type}
-              price={keg.price}
-              alcContent={keg.alcContent}
-              pintsLeft={keg.pintsLeft}
-              key={index}/>
-          )}
+            <Keg
+              name={keg.name}/>
+            )}
+          </td>
+          <td>
+          {masterKegList.map((keg, index) =>
+            <Keg
+              brewery={keg.brewery}/>
+            )}
+          </td>
+          <td>
+          {masterKegList.map((keg, index) =>
+            <Keg
+              type={keg.type}/>
+            )}
+          </td>
+          <td>
+          {masterKegList.map((keg, index) =>
+            <Keg
+              price={keg.price}/>
+            )}
+          </td>
+          <td>
+          {masterKegList.map((keg, index) =>
+            <Keg
+              price={keg.price}/>
+            )}
+          </td>
         </tbody>
       </table>
     </div>
