@@ -37,13 +37,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-      <style global jsx >{`
+        <style global jsx >{`
         body {
           font-family: Helvetica;
+          background-image: url('https://i.ytimg.com/vi/l1k8WgxPIFw/maxresdefault.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 390%;
         }
         a {
           color: #888;
           text-decoration: none;
+        }
+        table{
+          color: white;
+          font-size: 130%;
+        }
+        h2{
+          color: white;
         }
       `}</style>
         <div className='jumbotron'>

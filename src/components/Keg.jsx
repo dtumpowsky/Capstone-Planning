@@ -5,14 +5,6 @@ import PropTypes from 'prop-types';
 function Keg(props){
   const kegInformation =
     <div>
-      <style jsx>{`
-      div {
-        background-color: #A0FEFF;
-      }
-      div:hover {
-        background-color: #FFCCA0;
-      }
-    `}</style>
       <th>{props.name}</th>
       <td>{props.brewery}</td>
       <td>{props.type}</td>

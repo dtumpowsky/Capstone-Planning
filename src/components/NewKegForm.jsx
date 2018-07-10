@@ -30,6 +30,18 @@ function NewKegForm(props){
 
   return (
     <div>
+      <style global jsx >{`
+        body {
+          background-image: url('https://i.ytimg.com/vi/l1k8WgxPIFw/maxresdefault.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 300%;
+        }
+
+        input {
+          width: 300px;
+          height: 40px;
+        }
+      `}</style>
       <form onSubmit={handleNewKegFormSubmission}>
         <div>
           <input

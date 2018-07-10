@@ -12,6 +12,13 @@ function Admin(props){
   }
   return (
     <div>
+      <style global jsx >{`
+        body {
+          background-image: url('https://i.ytimg.com/vi/l1k8WgxPIFw/maxresdefault.jpg');
+          background-repeat: no-repeat;
+          background-size: 100% 310%;
+        }
+      `}</style>
       <h2>Admin</h2>
       <Link to="/newkeg">
         <button className='btn btn-success' type='submit'>Add Keg</button>

@@ -6,6 +6,12 @@ import PropTypes from 'prop-types';
 function KegList(props){
   return (
     <div>
+      <style jsx>{`
+      td:hover {
+        background-color: #FFCCA0;
+        color: black;
+      }
+    `}</style>
       <table className="table">
         <thead>
           <tr>
