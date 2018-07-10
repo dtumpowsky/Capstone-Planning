@@ -36,6 +36,7 @@ function NewKegForm(props){
             type='text'
             id='name'
             placeholder='Beer name'
+            required
             ref={(input) => {_name = input;}}/>
         </div>
         <div>
@@ -43,6 +44,7 @@ function NewKegForm(props){
             type='text'
             id='brewery'
             placeholder='Brewery'
+            required
             ref={(input) => {_brewery = input;}}/>
         </div>
         <div>
@@ -50,6 +52,7 @@ function NewKegForm(props){
             type='text'
             id='type'
             placeholder='Type'
+            required
             ref={(input) => {_type = input;}}/>
         </div>
         <div>
@@ -57,6 +60,7 @@ function NewKegForm(props){
             type='text'
             id='price'
             placeholder='Price'
+            required
             ref={(input) => {_price = input;}}/>
         </div>
         <div>
@@ -64,6 +68,7 @@ function NewKegForm(props){
             type='text'
             id='alcContent'
             placeholder='Alcohol %'
+            required
             ref={(input) => {_alcContent = input;}}/>
         </div>
         <div>
@@ -71,6 +76,7 @@ function NewKegForm(props){
             type='text'
             id='pintsLeft'
             placeholder='Pints'
+            required
             ref={(input) => {_pintsLeft = input;}}/>
           <div>
             <button className="btn btn-success"type='submit'>Add Keg</button>
