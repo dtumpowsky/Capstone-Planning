@@ -25,7 +25,8 @@ _If you run into a problem, contact us at tumpowskydavid@gmail.com_
 - This web application has the following functionalities:
   * Get All Kegs
   * Each keg displays its Name, Type, Brewery, Price, Alcohol %, and Pints Left
-  * Add new keg
+  * Add new keg through admin path
+  * Click on keg from admin path to get pint details
 
 ### License
 * This program is free software: you can redistribute it and/or modify
