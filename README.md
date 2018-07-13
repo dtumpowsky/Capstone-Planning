@@ -1,4 +1,4 @@
-### _React-Tap-Room_
+### _Capstone-Planning_
 ### Version 1.0
 #### By:
 #### Date: July 5, 2018
