@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header(){
+function Footer(){
   return (
     <div>
-      <h1>Outdoor Tracker</h1>
+      <h6>... footer info will go here ...</h6>
       <Link to="/">Home</Link>
     </div>
   );
 }
 
-export default Header;
+export default Footer;
