@@ -1,10 +1,15 @@
 ### _Capstone-Planning_
 ### Version 1.0
 #### By:
-#### Date: July 5, 2018
+#### Date: July 13, 2018
 
 ##### Description
-_This web application allows users to create a running log of kegs on tap_
+- This web application has the following functionalities:
+  * User will be able to track their movement/progress through Google Api.
+  * User will be able to start and stop their tracking
+  * App connects to Trails API to contain info for outdoor activity locations
+  * Activities include hiking, biking, skiing, camping, ATV
+  * Store data from tracking in a Firebase
 
 ##### Setup/Installation Requirements
 * React.js
@@ -20,13 +25,6 @@ _So far there are no bugs_
 _If you run into a problem, contact us at tumpowskydavid@gmail.com_
 
 ![picture alt](component-diagram.png "Component Diagram")
-
-#### Specs
-- This web application has the following functionalities:
-  * Get All Kegs
-  * Each keg displays its Name, Type, Brewery, Price, Alcohol %, and Pints Left
-  * Add new keg through admin path
-  * Click on keg from admin path to get pint details
 
 ### License
 * This program is free software: you can redistribute it and/or modify
