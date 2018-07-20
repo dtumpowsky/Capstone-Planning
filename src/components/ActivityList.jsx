@@ -3,16 +3,9 @@ import Activity from './Activity';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function KegList(props){
+function ActivityList(props){
   return (
     <div>
-      <style jsx>{`
-      td:hover {
-        background-color: #FFCCA0;
-        color: black;
-      }
-    `}</style>
-
       <p> *activity list will go here</p>
     </div>
   );
