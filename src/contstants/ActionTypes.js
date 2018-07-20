@@ -1,0 +1,1 @@
+export const RECIEVE_TRAIL = 'RECIEVE_TRAIL';
