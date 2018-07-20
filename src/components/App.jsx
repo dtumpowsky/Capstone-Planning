@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Moment from 'moment';
 import { v4 } from 'uuid';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import GoogleMap from './GoogleMap';
 
 
 class App extends React.Component {
@@ -21,12 +22,9 @@ class App extends React.Component {
           <Route exact path='/' />
           <Route component={Error404} />
         </Switch>
-        <Map google={this.props.google} zoom={14}>
-          <Marker onClick={this.onMarkerClick} name={'Current location'} />
-          <InfoWindow onClose={this.onInfoWindowClose}>
-
-        </InfoWindow>
-      </Map>
+        <div>
+          <GoogleMap/>
+        </div>
         <div style={{margin: '19px auto 0', width: 142}}>
           <a href="https://medium.com/" target="_blank">
             <div className="box">
@@ -43,6 +41,4 @@ class App extends React.Component {
 }
 
 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCzmdObLsLWto9B5Uy_eiKtlX95gZopT8w')
-})(App);
+export default App;
