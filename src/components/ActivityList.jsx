@@ -13,7 +13,7 @@ function KegList(props){
       }
     `}</style>
 
-    <p> *activity list will go here</p>
+      <p> *activity list will go here</p>
     </div>
   );
 }

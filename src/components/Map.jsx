@@ -12,7 +12,7 @@ class Map extends React.Component {
         lat: lat,
         lng: lng
       }
-    }
+    };
   }
 
   loadMap() {
