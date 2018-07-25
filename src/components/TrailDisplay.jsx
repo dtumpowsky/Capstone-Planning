@@ -31,10 +31,10 @@ const mapStateToProps = state => {
   const trail = state.trailsById[state.currentTrailId];
   const trailInfo = {
     id: trail.trailId,
-    artist: trail.artist,
-    title: trail.title,
-    trailArray: trail.trailArray,
-    arrayPosition: trail.arrayPosition
+    name: trail.name,
+    location: trail.location,
+    difficulty: trail.difficulty,
+    length: trail.length
   };
   return {
     trail: trailInfo
